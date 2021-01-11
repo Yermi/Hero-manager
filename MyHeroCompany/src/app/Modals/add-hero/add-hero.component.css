@@ -1,0 +1,43 @@
+.signup-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+.signup-form-2{
+  padding: 2%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnSubmit {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-form-2 .btnSubmit {
+  font-weight: 600;
+  color: #0062cc;
+  background-color: #fff;
+}
+
+.signup-form-2 .btnSubmit:hover {
+  background-color: rgb(205, 213, 248);
+}
+
+.sign-up-link {
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-link:hover {
+  color:rgb(146, 163, 236);
+}
+
+.alert-danger {
+  font-size: 14px;
+}

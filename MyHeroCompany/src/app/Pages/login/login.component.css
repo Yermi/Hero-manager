@@ -1,0 +1,47 @@
+.title {
+  font-size: 44px;
+  font-weight: bold;
+  text-shadow: 2px 2px #0e18a1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-container{
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+
+.login-form-2{
+  padding: 5%;
+  background: #0062cc;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnSubmit {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form-2 .btnSubmit {
+  font-weight: 600;
+  color: #0062cc;
+  background-color: #fff;
+}
+
+.login-form-2 .btnSubmit:hover {
+  background-color: rgb(205, 213, 248);
+}
+
+.sign-up-link {
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-link:hover {
+  color:rgb(146, 163, 236);
+}

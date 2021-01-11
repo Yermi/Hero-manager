@@ -1,0 +1,17 @@
+.hero-item {
+  border: black solid 2px;
+  border-radius: 10px;
+  box-shadow: 5px 5px #888888;
+  margin-bottom: 15px;
+  background-color: rgb(24, 79, 180, 0.5);
+
+}
+
+.my-btn {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.my-btn:hover {
+  background-color: rgb(193, 202, 241);
+}

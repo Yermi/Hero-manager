@@ -1,0 +1,73 @@
+<div style="margin-top: 10px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <button type="button" style="margin-left: 5px; cursor: pointer;" aria-label="Close"
+          (click)="activeModal.close('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="col-sm">
+        <h4 class="modal-title" style="text-align: center;">Add Hero </h4>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-body">
+  <div class="container signup-container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10 signup-form-2">
+        <h4 style="font-weight: bold;">Enter Hero Details:</h4>
+        <form [formGroup]="addHeroForm" #ngForm="ngForm" class="form-group" (ngSubmit)="Save()">
+          <div>
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text" [(ngModel)]="Name" id="name" formControlName="name" class="form-control"
+                placeholder="Name" />
+            </div>
+            <div
+              *ngIf="ngForm.submitted && addHeroForm.controls.name.errors && addHeroForm.controls.name.errors.required"
+              class="alert alert-danger" role="alert">
+              Name is required
+            </div>
+          </div>
+
+          <div>
+            <div class="form-group">
+              <label for="startPower">Start Power:</label>
+              <input type="number" [(ngModel)]="StartPower" id="startPower" formControlName="power" class="form-control"
+                placeholder="Start Power" />
+            </div>
+            <div
+              *ngIf="ngForm.submitted && addHeroForm.controls.power.errors && addHeroForm.controls.power.errors.required"
+              class="alert alert-danger" role="alert">
+              Current Power is required
+            </div>
+          </div>
+
+          <div>
+            <div class="form-group">
+              <label for="ability">Ability:</label>
+              <select [(ngModel)]="Ability" id="ability" formControlName="ability" class="form-control">
+                <option value="1">Attacker</option>
+                <option value="2">Defender</option>
+              </select>
+            </div>
+            <div
+              *ngIf="ngForm.submitted && addHeroForm.controls.ability.errors && addHeroForm.controls.ability.errors.required"
+              class="alert alert-danger" role="alert">
+              Ability is required
+            </div>
+          </div>
+
+          <div class="form-group" style="text-align:center;">
+            <input type="submit" class="btnSubmit" value="Save Hero" />
+          </div>
+        </form>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</div>

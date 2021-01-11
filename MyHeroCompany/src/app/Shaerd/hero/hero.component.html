@@ -1,0 +1,21 @@
+<div class="hero-item">
+  <div style="margin-left: 5%; margin-top: 3%;">
+      <span style="font-weight: bold; font-size: large;">Name: {{item.Name}}</span>
+  </div>
+  <hr style="width: 90%;">
+  <div style="margin-left: 5%; margin-bottom: 3%;">
+      <span style="font-weight: bold;">Start Training: </span> {{item.StartDate | date: 'dd/MM/yyyy'}}
+      <br>
+      <span style="font-weight: bold;;">Start power: </span> {{item.StartPower}}
+      <br>
+      <span style="font-weight: bold;">Current power: </span> {{item.CurrentPower}}
+      <br>
+      <span style="font-weight: bold;">Ability: </span><span *ngIf="item && item.Ability">{{Ability[item.Ability]}}</span>
+      <br>
+      <span *ngIf="item.SuitColors" style="font-weight: bold;">Suit Colors: <span [style.background]="item.SuitColors.Name">{{item.SuitColors.Name}}</span> </span>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 5px; margin-top: 25px;">
+      <button type="button" class="btn btn-dark my-btn" (click)="Train()">Train</button>
+  </div>
+</div>

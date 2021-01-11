@@ -1,0 +1,29 @@
+<div>
+  <div class="container" style="margin-top: 10px;">
+    <div class="row">
+      <div class="col-sm">
+        <h3 style="text-align: left;">Hi {{trainerService.Name}}!</h3>
+      </div>
+      <div class="col-sm" style="text-align: right;">
+        <button type="button" class="btn btn-dark" (click)="logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+          Logout</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm">
+        <h5 style="text-align: left;">Your Heros!</h5>
+      </div>
+      <div class="col-sm" style="text-align: right;">
+        <button type="button" class="btn btn-dark" (click)="openHeroModal()"> <i class="fa fa-plus" aria-hidden="true"></i> Add Hero</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div *ngFor="let hero of heros" class="col-md-4 col-sm-6 col-12">
+        <app-hero [item]="hero" (trainHero)="trainHero($event)">
+        </app-hero>
+      </div>
+    </div>
+  </div>
+</div>
